@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption</title>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h3>Encryption🔐</h3>
+        <p>
+            This online tool will help you encrypt text with different ciphers. It supports various modes and padding schemes.
+        </p>
+    </header>
+
+    <main>
+        <form id="encryptForm" action="http://localhost:8000/cipher" method="post"> <!--за место # надо вставить ссылку на сервер-->
+            <div class="left_side">
+            
+                <div class="title_senttings">
+                    <p>Settings</p>
+                </div>
+                
+                <div class="settings">
+                    <label for="inputType">Input Type</label>                                            
+                    <select name="inputType" id="inputType" required>
+                        <option value="text">Text</option>
+                        <option value="file">File</option>
+                    </select>                           
+                </div>
+
+                <div class="settings">
+                    <label for="encryption">Encryption method</label>
+                    <select name="encryption" id="encryption" required>
+                        <option value="" disabled selected>--Choose--</option>
+                        <option value="caesar">The Caesar Cipher</option>
+                        <option value="vigenere">The Vigenere Cipher</option>
+                        <option value="vernam">The Vernam Cipher</option>
+                    </select>
+                </div>
+
+                <div class="settings">
+                    <label for="encryptionKey">Encryption key</label>
+                    <input type="text" name="encryptionKey" id="encryptionKey" placeholder="Enter the encryption key">
+                </div>
+
+                <div class="settings">
+                    <input type="submit" value="Encrypt">
+                </div>
+            </div>
+            
+            <div class="right_side">
+                <div class="title_input">
+                    <p>Input</p>
+                </div>
+
+                <textarea class="area" name="userText" id="userText" placeholder="Enter the text to encrypt..." required></textarea>
+                
+                <div class="areafile">                  
+                        <label for="userFile">
+                            <img src="./img/file.png" alt="">
+                            <p>Paste the file here</p>
+                            <input type="file" name="userFile" id="userFile" >
+                        </label>
+
+                </div>
+                
+                <div class="title_output">
+                    <p>Output</p>
+                </div>
+                <textarea class="area" id="outputText" name="outputText" readonly placeholder="There will be an encrypted text here"></textarea>
+            </div>            
+        </form>    
+        <script src="./script/script.js"></script>
+    </main>
+    <footer>
+        <p>© 2025 Encryption Tool — created by Polina and German</p>
+    </footer>
+    
+</body>
+</html>
