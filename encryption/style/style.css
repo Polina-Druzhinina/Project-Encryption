@@ -1,0 +1,143 @@
+body{
+    background-image: url(../img/fon.jpg);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh
+}
+
+p{
+    margin: 0;
+}
+
+h3{
+    margin: 0;
+}
+
+label{
+    font-weight: bold;
+}
+
+main{
+    background-color: white;
+    width: 40%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40px auto 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.description{
+    text-align: center;
+}
+
+.description > * {
+    margin-bottom: 7px;
+}
+
+.description > h3{
+    color: #1B5E20;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.border{
+    border: 2px solid greenyellow;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content.active{
+    display: flex;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.card > p{
+    font-weight: bold;
+}
+
+.option{
+    background-color: #a1f7a6;
+    border: 1px solid #408745;
+    border-radius: 4px;
+    padding: 10px 20px;
+    width: 48%;
+}
+
+.option:hover{
+    background-color: #67c86e;
+}
+
+.option.active{
+    background-color: #67c86e;
+}
+
+.switchStart{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.switch{
+    display: flex;
+    justify-content: space-between;
+}
+
+.transition{
+    border-radius: 4px;
+    padding: 7px 12px;
+}
+
+.transition.next{
+    background-color: #359f3c;
+    border: 1px solid #1B5E20;
+    color: white;
+}
+
+.transition.but{
+    background-color: #359f3c;
+    border: 1px solid #1B5E20;
+    color: white;
+}
+.transition.back{
+    background-color: #b2b6b3;
+    border: 1px solid #737773;
+    color: rgb(4, 4, 4);
+}
+
+.transition:hover{
+    background-color: #2f8235;
+}
+
+textarea{
+    resize: none;
+    height: 10vh;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #A5D6A7;
+    background-color: #fff;
+    color: #2C3E2C;
+    line-height: 1.5;
+    width: 100%;
+}
+
+#userTextField, #userFileField { 
+    display: none; 
+}
+#userTextField.active, #userFileField.active { 
+    display: block; 
+}
+

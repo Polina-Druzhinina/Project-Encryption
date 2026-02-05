@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+</head>
+<body>
+    <main>
+        <div class="description">
+            <h3>Encryption🔐</h3>
+            <p>
+                This online tool will help you encrypt text with different ciphers. 
+                It supports various modes and padding schemes.
+            </p>
+        </div>
+
+        <div class="border"></div>
+
+        <form id="encryptForm" method="post" action="http://localhost:8000/cipher">
+            <div class="content active">
+                <div class="card">
+                    <p>
+                        Step 1. Choose, that we want to encrypt:
+                    </p>
+                    <div class="choice">
+                        <button type="button" class="option" data-type="text">Text</button>
+                        <button type="button" class="option" data-type="file">File</button>
+                    </div>
+                </div>
+                <div class="switchStart">
+                    <button class="transition next">Next &#8594;</button>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <label for="encryption">Step 2. Choose encryption method</label>
+                    <select name="encryption" id="encryption" required>
+                        <option value="" disabled selected>--Method--</option>
+                        <option value="caesar">The Caesar Cipher</option>
+                        <option value="vigenere">The Vinger Cipher</option>
+                        <option value="vernam">The Verner Cipher</option>
+                    </select>  
+                </div>
+                <div class="switch">
+                    <button class="transition back">&#8592; Back</button> 
+                    <button class="transition next">Next &#8594;</button>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <label for="encryptionKey">Step 3. Specify encryption key</label>
+                    <input type="text" name="encryptionKey" id="encryptionKey" placeholder="Enter the encryption key">
+                </div>
+                <div class="switch">
+                    <button class="transition back">&#8592; Back</button> 
+                    <button class="transition next">Next &#8594;</button>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <p>Step 4. Enter text/At file</p>
+                    <div id="userTextField">
+                        <textarea class="area" name="userText" id="userText" placeholder="Enter the text to encrypt..." required></textarea>
+                    </div>
+                    <div id="userFileField">
+                        <input type="file" id="userFile">
+                    </div>
+                    <div class="card">
+                        <label for="outputText">Encrypted text:</label>
+                        <textarea id="outputText" readonly></textarea>
+                    </div>
+                </div>
+                <div class="switch">
+                    <button class="transition back">&#8592; Back</button> 
+                    <input type="submit" value="Encrypt it" class="transition but" id="encryptBtn">
+                </div>
+            </div> 
+
+        </form>
+    </main>
+    <script src="./script/script.js"></script>
+</body>
+</html>
